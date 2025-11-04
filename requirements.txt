@@ -1,0 +1,32 @@
+###user
+register:
+    oath2
+    or
+    jwt
+
+login:
+    based on previous part
+
+can follow:
+    req -> logged in
+
+can post
+    req -> logged in
+
+can comment;
+    req -> logged in
+
+//users can follow each other
+//users can see each other's posts if logged in
+
+!!no like
+!!no comment
+
+###post
+has caption
+user id
+image
+
+
+###notofication
+sever sent email
