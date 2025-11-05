@@ -19,7 +19,7 @@ type Server struct {
 func New(config config.Config, authSvc authservice.Service, userSvc userservice.Service) Server {
 	return Server{
 		config:      config,
-		userHandler: userhandler.New(authSvc, userSvc, config.Auth.SignKey),
+		userHandler: userhandler.New(authSvc, userSvc, config.Auth),
 	}
 }
 
@@ -31,7 +31,7 @@ func (s Server) Serve() {
 	e.Use(middleware.Recover())
 
 	// Routes
-	e.GET("/health-check", s.healthCheck)
+	e.GET("/health-check", healthCheck)
 
 	s.userHandler.SetUserRoutes(e)
 

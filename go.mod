@@ -5,6 +5,7 @@ go 1.25.1
 require (
 	github.com/golang-jwt/jwt/v5 v5.3.0
 	github.com/labstack/echo-jwt v0.0.0-20221127215225-c84d41a71003
+	github.com/labstack/echo-jwt/v4 v4.3.1
 	github.com/labstack/echo/v4 v4.13.4
 	github.com/lib/pq v1.10.9
 	golang.org/x/crypto v0.43.0
