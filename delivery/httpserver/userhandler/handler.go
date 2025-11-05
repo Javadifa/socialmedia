@@ -6,17 +6,17 @@ import (
 )
 
 type Handler struct {
-	authSvc     authservice.Service
-	userSvc     userservice.Service
-	authSignKey []byte
+	authSvc    authservice.Service
+	userSvc    userservice.Service
+	authConfig authservice.Config
 	//validator later on
 }
 
 func New(authSvc authservice.Service,
-	userSvc userservice.Service, authSignKey string) Handler {
+	userSvc userservice.Service, authConfig authservice.Config) Handler {
 	return Handler{
-		authSvc:     authSvc,
-		userSvc:     userSvc,
-		authSignKey: []byte(authSignKey),
+		authSvc:    authSvc,
+		userSvc:    userSvc,
+		authConfig: authConfig,
 	}
 }
